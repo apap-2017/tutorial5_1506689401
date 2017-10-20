@@ -40,8 +40,9 @@ public class StudentController
             @RequestParam(value = "name", required = false) String name,
             @RequestParam(value = "gpa", required = false) double gpa)
     {
+//        StudentModel student = new StudentModel (npm, name, gpa, null);
         StudentModel student = new StudentModel (npm, name, gpa, null);
-        studentDAO.addStudent (student);
+    	studentDAO.addStudent (student);
 
         return "success-add";
     }
